@@ -104,7 +104,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     	thunderbird
-	openvpn	
+	    openvpn
     ];
   };
  
@@ -128,33 +128,45 @@
   
   
   #Fingerprint Stuff
-  services.fprintd.enable = true;
+  #services.fprintd.enable = true;
 
-  security.pam.services.swaylock = {};
-  security.pam.services.swaylock.fprintAuth = true;
+  #security.pam.services.swaylock = {};
+  #security.pam.services.swaylock.fprintAuth = true;
   
   
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  	vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+
+  	# Essentials
+  	vim
+  	neovim
    	wget
-   	godot_4
 	git
 	neofetch
-        tree
-	pkgs.usbutils	
+    tree
+	usbutils
+
+	# Games
+	godot_4
+
+	# Browsers
+	chromium
+
+	# Text and Notes
 	libreoffice-qt
 	hunspell
 	hunspellDicts.uk_UA
-	chromium	
 	xournalpp
-	
+
+	# jetbrains stuff
 	jetbrains.webstorm
 	jetbrains.pycharm-professional
 	jetbrains.idea-ultimate
-	jetbrains.clion	
+	jetbrains.clion
+
+	# Programming languages
 	python3Full	
   ];
   
