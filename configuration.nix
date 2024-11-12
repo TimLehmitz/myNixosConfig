@@ -167,7 +167,10 @@
 	jetbrains.clion
 
 	# Programming languages
-	python3Full	
+	python3Full
+
+	gnomeExtensions.enhanced-osk
+
   ];
   
 
