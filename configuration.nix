@@ -25,6 +25,9 @@
   #Enable Hyprland
   programs.hyprland.enable = true;
 
+
+  hardware.amdgpu.opencl.enable = true;
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -142,14 +145,16 @@
   	# Essentials
   	vim
   	neovim
+  	kitty
    	wget
 	git
 	neofetch
     tree
 	usbutils
-
+	openshot-qt
 	# Games
 	godot_4
+	davinci-resolve
 
 	# Browsers
 	chromium
@@ -168,8 +173,6 @@
 
 	# Programming languages
 	python3Full
-
-	gnomeExtensions.enhanced-osk
 
   ];
   
