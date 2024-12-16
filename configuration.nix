@@ -28,6 +28,13 @@
 
   hardware.amdgpu.opencl.enable = true;
 
+   hardware.opengl = {
+     enable = true;
+     extraPackages = with pkgs; [
+       rocmPackages.clr.icd
+     ];
+   };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -90,12 +97,15 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+    jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+
+
+
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
@@ -152,6 +162,8 @@
     tree
 	usbutils
 	openshot-qt
+	libsForQt5.libopenshot
+	libsForQt5.libopenshot-audio
 	# Games
 	godot_4
 	davinci-resolve
