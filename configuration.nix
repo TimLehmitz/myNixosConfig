@@ -24,11 +24,14 @@
 
   #Enable Hyprland
   programs.hyprland.enable = true;
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+
 
 
   hardware.amdgpu.opencl.enable = true;
 
-   hardware.opengl = {
+   hardware.graphics = {
      enable = true;
      extraPackages = with pkgs; [
        rocmPackages.clr.icd
@@ -97,7 +100,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
-    jack.enable = true;
+    #jack.enable = true;
 
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
@@ -152,15 +155,23 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
+    # hyperland stuff
+    waybar
+    eww
+    dunst
+    libnotify
+    swww
+    kitty
+    rofi-wayland
+    blueberry
+
   	# Essentials
   	vim
   	neovim
-  	kitty
    	wget
 	git
 	neofetch
     tree
-	usbutils
 	openshot-qt
 	libsForQt5.libopenshot
 	libsForQt5.libopenshot-audio
