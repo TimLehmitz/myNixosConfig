@@ -32,7 +32,7 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     #(pkgs.nerdfonts.override { fonts = [ "powerline-extra-symbols" ]; })
-    (pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "ProggyClean" ]; })
+    #(pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "ProggyClean" ]; })
 
 
     # # You can also create simple shell scripts directly inside your
@@ -85,6 +85,9 @@
     };
   };
   fonts.fontconfig.enable = true;
+  home.file."./config/hypr/hyprland.conf".source = ./hyprland.conf;
+  home.file."./config/rofi/config.rasi".source = ./config.rasi;
+
 
 
 
