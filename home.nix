@@ -20,20 +20,36 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs;[
+
+    # hyperland stuff
+
+    waybar
+    eww
+    dunst
+    libnotify
+    swww
+    kitty
+    rofi-wayland
+    blueberry
+    hyprpaper
+    hyprpicker
+
+    # hello
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-     hello
-     discord
-     gimp-with-plugins
-    # openshot-qt
+
+    discord
+    gimp-with-plugins
+    neovim
+    emacs
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     #(pkgs.nerdfonts.override { fonts = [ "powerline-extra-symbols" ]; })
-    #(pkgs.nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "ProggyClean" ]; })
-
+    nerd-fonts._0xproto
+    nerd-fonts.droid-sans-mono
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -43,9 +59,16 @@
     # '')
   ];
 
+
+
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/hypr/hyprland.conf".source = ./hyprland.conf;
+    ".config/rofi/config.rasi".source = ./config.rasi;
+
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -81,15 +104,25 @@
     enable = true;
     shellAliases = {
         ll = "ls -l";
-        ".." = "cd ..";
+        ".." = "cd ..";#
+        g = "git";
+
+
     };
   };
+  home.shellAliases = {
+      sysUpdate = "
+                  cd ~/.dotfiles
+                  nix flake update
+                  sudo nixos-rebuild switch --flake .
+                  home-manager switch --flake .
+              ";
+
+
+  };
+
+
   fonts.fontconfig.enable = true;
-  home.file."./config/hypr/hyprland.conf".source = ./hyprland.conf;
-  home.file."./config/rofi/config.rasi".source = ./config.rasi;
-
-
-
 
 
 

@@ -155,19 +155,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
-    # hyperland stuff
-    waybar
-    eww
-    dunst
-    libnotify
-    swww
-    kitty
-    rofi-wayland
-    blueberry
-
   	# Essentials
   	vim
-  	neovim
    	wget
 	git
 	neofetch
@@ -193,9 +182,6 @@
 	jetbrains.pycharm-professional
 	jetbrains.idea-ultimate
 	jetbrains.clion
-
-	# Programming languages
-	python3Full
 
   ];
   
