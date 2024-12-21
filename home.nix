@@ -67,6 +67,10 @@
   home.file = {
     ".config/hypr/hyprland.conf".source = ./hyprland.conf;
     ".config/rofi/config.rasi".source = ./config.rasi;
+    ".config/home-manager/home.nix".source = ./home.nix;
+    ".config/waybar/config".source = ./waybar/config;
+    ".config/waybar/style.css".source = ./waybar/style.css;
+
 
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
@@ -105,18 +109,16 @@
     shellAliases = {
         ll = "ls -l";
         ".." = "cd ..";#
-        g = "git";
-
-
+        sysUpdate = "
+              cd ~/.dotfiles
+              nix flake update
+              sudo nixos-rebuild switch --flake .
+              home-manager switch --flake .
+        ";
     };
   };
   home.shellAliases = {
-      sysUpdate = "
-                  cd ~/.dotfiles
-                  nix flake update
-                  sudo nixos-rebuild switch --flake .
-                  home-manager switch --flake .
-              ";
+
 
 
   };
