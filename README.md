@@ -9,6 +9,6 @@
 * [x] simple folder structure
 * [x] home-manager config
 * [ ] make configuration.nix as small as possible
-* [ ] 
-* [ ] 
-* [ ] 
+* [ ] dev-shells for programming
+* [ ] fancy hyprland config
+* [ ] make davinci-resolve work
