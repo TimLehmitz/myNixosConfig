@@ -33,6 +33,11 @@
     blueberry
     hyprpaper
     hyprpicker
+    hyprshot
+
+    playerctl
+    brightnessctl
+
 
     # hello
     # # Adds the 'hello' command to your environment. It prints a friendly
@@ -41,15 +46,24 @@
     discord
     gimp-with-plugins
     neovim
-    emacs
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     #(pkgs.nerdfonts.override { fonts = [ "powerline-extra-symbols" ]; })
-    nerd-fonts._0xproto
-    nerd-fonts.droid-sans-mono
+    #noto-fonts
+    #noto-fonts-cjk
+    #noto-fonts-emoji
+    #liberation_ttf
+    #fira-code
+    #fira-code-symbols
+    #mplus-outline-fonts.githubRelease
+    #dina-font
+    #proggyfonts
+    #nerd-fonts.fira-code
+    #nerd-fonts.droid-sans-mono
+
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -65,11 +79,11 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/hyprland.conf".source = ./hyprland.conf;
-    ".config/rofi/config.rasi".source = ./config.rasi;
+    ".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
+    ".config/rofi/config.rasi".source = ./hyprland/config.rasi;
     ".config/home-manager/home.nix".source = ./home.nix;
-    ".config/waybar/config".source = ./waybar/config;
-    ".config/waybar/style.css".source = ./waybar/style.css;
+    ".config/waybar/config".source = ./hyprland/waybar/config;
+    ".config/waybar/style.css".source = ./hyprland/waybar/style.css;
 
 
 

@@ -8,8 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-	#inputs.home-manager.nixosModules.default
-      ./my_scripts.nix
     ];
 
   # Bootloader.
@@ -142,14 +140,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   
-  
   #Fingerprint Stuff
   #services.fprintd.enable = true;
 
   #security.pam.services.swaylock = {};
   #security.pam.services.swaylock.fprintAuth = true;
-  
-  
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -184,6 +179,16 @@
 	jetbrains.clion
 
   ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+
+
+
+  ];
+
   
 
 

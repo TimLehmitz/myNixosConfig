@@ -1,14 +1,14 @@
-# Dies ist meine Persöhnliche Nixos-Config 
+# My personal config for NixOs 
 
-* TODO: write a nice README
+![screenshot of system](/images/hyprland-screen.png)
 
 
-## Other TODOS
+## TODOS
 
-* [ ] hyprland
-* [ ] make a folderstructure
-* [ ] home-manager stuff
-* [ ] split up /configuration.nix
+* [x] hyprland basic config
+* [x] simple folder structure
+* [x] home-manager config
+* [ ] make configuration.nix as small as possible
 * [ ] 
 * [ ] 
 * [ ] 
