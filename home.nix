@@ -34,6 +34,8 @@
     hyprpaper
     hyprpicker
     hyprshot
+    networkmanagerapplet
+    blueman
 
     playerctl
     brightnessctl

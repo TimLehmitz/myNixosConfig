@@ -12,6 +12,7 @@
     ],
     "modules-right": [
         "tray",
+        "cpu",
         "memory",
         "network",
         "wireplumber",
@@ -52,9 +53,13 @@
         }
     },
     "memory": {
-        "interval": 5,
+        "interval": 1,
         "format": "󰍛 {}%",
         "max-length": 10
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "CPU: {usage}%"
     },
     "tray": {
         "spacing": 10
@@ -76,7 +81,7 @@
 	"on-click": "~/.config/rofi/wifi/wifi.sh &",
         "on-click-right": "~/.config/rofi/wifi/wifinew.sh &",
 	"interval": 5,
-	"nospacing": 1,
+	"nospacing": 1
     },
     "wireplumber": {
         "format": "{icon}",

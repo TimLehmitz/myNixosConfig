@@ -178,6 +178,9 @@
 	jetbrains.idea-ultimate
 	jetbrains.clion
 
+	makemkv
+
+
   ];
 
   fonts.packages = with pkgs; [
