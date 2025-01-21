@@ -13,7 +13,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "24.05"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing. (changed it from 24.05 yolo)
 
   nixpkgs.config.allowUnfree = true;
 
@@ -60,17 +60,17 @@
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     #(pkgs.nerdfonts.override { fonts = [ "powerline-extra-symbols" ]; })
-    #noto-fonts
-    #noto-fonts-cjk
-    #noto-fonts-emoji
-    #liberation_ttf
-    #fira-code
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
     #fira-code-symbols
-    #mplus-outline-fonts.githubRelease
+    mplus-outline-fonts.githubRelease
     #dina-font
-    #proggyfonts
-    #nerd-fonts.fira-code
-    #nerd-fonts.droid-sans-mono
+    proggyfonts
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
 
 
     # # You can also create simple shell scripts directly inside your
