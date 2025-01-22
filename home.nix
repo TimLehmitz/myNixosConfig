@@ -52,6 +52,7 @@
     nextcloud-client
     lmms
     audacity
+    inkscape-with-extensions
 
 
 
