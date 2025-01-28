@@ -185,6 +185,9 @@
 
 	makemkv
 
+    python314
+    thonny
+
 
   ];
 
