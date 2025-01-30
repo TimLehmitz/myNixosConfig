@@ -76,7 +76,7 @@
   };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  #services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
@@ -111,11 +111,6 @@
   };
 
 
-
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.timl = {
     isNormalUser = true;
@@ -126,14 +121,6 @@
 	    openvpn
     ];
   };
- 
-# home-manager = {
-  # also pass inputs to home-manager modules
-#  extraSpecialArgs = {inherit inputs;};
-#  users = {
-#    "timl" = import ./home.nix;
-#  };
-#  };
 
 
   # Install firefox.
@@ -144,15 +131,9 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  
-  #Fingerprint Stuff
-  #services.fprintd.enable = true;
 
-  #security.pam.services.swaylock = {};
-  #security.pam.services.swaylock.fprintAuth = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+
   environment.systemPackages = with pkgs; [
 
   	# Essentials
