@@ -168,6 +168,7 @@
 
     python314
     thonny
+    obs-studio
 
 
   ];
